@@ -1,0 +1,41 @@
+<!-- templates/feedbacks.html -->
+{% extends 'base.html' %}
+
+{% block title %}Feedbacks dos Responsáveis{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Feedbacks dos Responsáveis</h1>
+
+        <!-- Botão para adicionar novo feedback -->
+        <a href="{% url 'adicionar_feedback' %}" class="btn btn-primary mb-3">Adicionar Feedback</a>
+
+
+        <!-- Tabela para exibir feedbacks -->
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Conteúdo</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feedback in feedbacks %}
+                    <tr>
+                        <td>{{ feedback.conteudo }}</td>
+                        <td>{{ feedback.data }}</td>
+                        <td>
+                            <a href="{% url 'editar_feedback' feedback.id %}" class="btn btn-sm btn-warning">Editar</a>
+                            <a href="{% url 'excluir_feedback' feedback.id %}" class="btn btn-sm btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="text-center">Nenhum feedback encontrado.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

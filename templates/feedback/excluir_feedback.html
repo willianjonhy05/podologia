@@ -1,0 +1,21 @@
+<!-- templates/feedback/excluir_feedback.html -->
+{% extends 'base.html' %}
+
+{% block title %}Excluir Feedback{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header bg-danger text-white">
+            <h3>Excluir Feedback</h3>
+        </div>
+        <div class="card-body">
+            <p class="lead">Tem certeza que deseja excluir o feedback de <strong>{{ feedback.usuario }}</strong>?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Sim, excluir</button>
+                <a href="{% url 'listar_feedbacks' %}" class="btn btn-secondary ml-2">Cancelar</a>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

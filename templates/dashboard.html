@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4 text-center">Dashboard</h2>
+    <div class="row">
+        <!-- Exemplo de cards para exibir dados no dashboard -->
+        <div class="col-md-4">
+            <div class="card text-center mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Relatórios</h5>
+                    <p class="card-text">Visualize os relatórios de progresso.</p>
+                    <a href="{% url 'relatorios' %}" class="btn btn-primary">Acessar Relatórios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Feedbacks</h5>
+                    <p class="card-text">Consulte os feedbacks dos responsáveis.</p>
+                    <a href="{% url 'listar_feedbacks' %}" class="btn btn-primary">Ver Feedbacks</a> <!-- Corrigido -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Agendamentos</h5>
+                    <p class="card-text">Gerencie os agendamentos dos atendimentos.</p>
+                    <a href="{% url 'agendamentos' %}" class="btn btn-primary">Ver Agendamentos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

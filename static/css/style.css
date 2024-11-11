@@ -1,0 +1,54 @@
+/* Configuração global para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão como Arial, com fallback sans-serif */
+    margin: 0;                      /* Remove margens padrão */
+    padding: 0;                     /* Remove preenchimentos padrão */
+    background-color: #f4f4f9;      /* Define uma cor de fundo suave para o corpo da página */
+}
+
+/* Estilo para o cabeçalho da página */
+header {
+    background-color: #007BFF;      /* Define o fundo do cabeçalho como azul */
+    color: white;                   /* Define a cor do texto como branca */
+    padding: 1rem;                  /* Adiciona preenchimento em torno do conteúdo do cabeçalho */
+    text-align: center;             /* Centraliza o texto */
+}
+
+/* Estilo para os links de navegação dentro do cabeçalho */
+header nav a {
+    color: white;                   /* Define a cor dos links como branca */
+    margin: 0 1rem;                 /* Adiciona espaçamento horizontal entre os links */
+    text-decoration: none;          /* Remove sublinhado dos links */
+}
+
+/* Estilo para o rodapé da página */
+footer {
+    background-color: #333;         /* Define o fundo do rodapé como cinza escuro */
+    color: white;                   /* Define a cor do texto como branca */
+    padding: 1rem;                  /* Adiciona preenchimento ao redor do conteúdo do rodapé */
+    text-align: center;             /* Centraliza o texto do rodapé */
+    margin-top: 2rem;               /* Adiciona espaço acima do rodapé */
+}
+
+/* Estilo para contêineres de páginas específicas (login, dashboard, relatórios, feedbacks, agendamentos) */
+.login-container, .dashboard-container, .relatorios-container, .feedbacks-container, .agendamentos-container {
+    max-width: 600px;               /* Limita a largura máxima dos contêineres */
+    margin: 2rem auto;              /* Centraliza o contêiner e adiciona margem vertical */
+    padding: 2rem;                  /* Adiciona preenchimento interno */
+    background-color: white;        /* Define o fundo do contêiner como branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destaque */
+}
+
+/* Estilo para botões */
+button {
+    background-color: #007BFF;      /* Define a cor de fundo do botão como azul */
+    color: white;                   /* Define a cor do texto do botão como branca */
+    padding: 0.5rem 1rem;           /* Adiciona preenchimento ao redor do texto do botão */
+    border: none;                   /* Remove borda padrão */
+    cursor: pointer;                /* Define o cursor como "pointer" para indicar interatividade */
+}
+
+/* Estilo de hover para botões */
+button:hover {
+    background-color: #0056b3;      /* Muda o fundo para um azul mais escuro ao passar o mouse */
+}

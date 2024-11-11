@@ -1,0 +1,33 @@
+<!-- templates/agendamentos/adicionar_agendamento.html -->
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Adicionar Agendamento{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Adicionar Agendamento</h1>
+
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+
+            <!-- Campo do formulário estilizado com Bootstrap -->
+            <div class="form-group mb-3">
+                {{ form.usuario.label_tag }}
+                {{ form.usuario|add_class:"form-control" }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.data_agendamento.label_tag }}
+                {{ form.data_agendamento|add_class:"form-control" }}
+            </div>
+            <div class="form-group mb-3">
+                {{ form.data_notificacao.label_tag }}
+                {{ form.data_notificacao|add_class:"form-control" }}
+            </div>
+
+            <!-- Botões -->
+            <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+            <a href="{% url 'agendamentos' %}" class="btn btn-secondary mt-3 ml-2">Voltar para Agendamentos</a>
+        </form>
+    </div>
+{% endblock %}

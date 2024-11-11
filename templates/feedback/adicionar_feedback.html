@@ -1,0 +1,32 @@
+<!-- templates/feedback/adicionar_feedback.html -->
+{% extends 'base.html' %}
+{% load widget_tweaks %}  <!-- Carregar widget_tweaks para add_class -->
+
+{% block title %}Adicionar Feedback{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Adicionar Feedback</h1>
+
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+
+            <!-- Campo Usuário -->
+            <div class="form-group mb-3">
+                {{ form.usuario.label_tag }}
+                {{ form.usuario|add_class:"form-control" }}
+            </div>
+
+            <!-- Campo Conteúdo do Feedback -->
+            <div class="form-group mb-3">
+                {{ form.conteudo.label_tag }}
+                {{ form.conteudo|add_class:"form-control" }}
+            </div>
+
+            <!-- Botões -->
+            <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+            <a href="{% url 'listar_feedbacks' %}" class="btn btn-secondary mt-3 ml-2">Voltar</a>
+
+        </form>
+    </div>
+{% endblock %}
