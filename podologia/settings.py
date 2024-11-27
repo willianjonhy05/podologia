@@ -60,14 +60,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'podologia.wsgi.application'
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': [
+#         'rest_framework.renderers.JSONRenderer',
+#     ],
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ],
+# }
 
 
 # Database
@@ -138,7 +138,7 @@ STATICFILES_DIRS = [
 # URL de redirecionamento para login
 LOGIN_URL = '/login/'
 
-AUTH_USER_MODEL = 'core.Usuario'
+# AUTH_USER_MODEL = 'core.Usuario'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
